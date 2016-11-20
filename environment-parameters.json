@@ -1,37 +1,10 @@
 [
-   {
-      "id":"MOLGENIS_ADMIN_PASSWORD",
+  {
+      "id":"JUPYTER_PASSWORD",
       "display_name":"Molgenis Admin Password",
       "type":"PASSWORD",
       "default_value":"",
-      "description":"Admin Password for Molgenis,rember well !",
-      "min_length": "1",
-      "max_length": "128"
-   },
-   {
-      "id":"MOLGENIS_ADMIN_EMAIL",
-      "display_name":"Molgenis Admin Email",
-      "type":"text",
-      "default_value":"",
-      "description":"E-mail of the Administrator",
-      "min_length": "1",
-      "max_length": "128"
-   },
-   {
-      "id":"MYSQL_ROOT_PASSWORD",
-      "display_name":"mysql root password",
-      "type":"PASSWORD",
-      "default_value":"",
-      "description":"Root password of the mysql database",
-      "min_length": "1",
-      "max_length": "128"
-   },
-   {
-      "id":"MYSQL_PASSWORD",
-      "display_name":"mysql password´",
-      "type":"PASSWORD",
-      "default_value":"",
-      "description":"Password for mysql the user molgenis",
+      "description":"Configures Jupyter Notebook to require the given plain-text password. Should be combined with USE_HTTPS on untrusted networks. Note that this option is not as secure as passing a pre-hashed password on the command line!",
       "min_length": "1",
       "max_length": "128"
    }

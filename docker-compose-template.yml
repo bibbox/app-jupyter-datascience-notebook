@@ -1,39 +1,21 @@
 version: '2'
 services:
-  §§INSTANCE-molgenis:
-    image: bibbox/molgenis
-    container_name:  §§INSTANCE-molgenis
-    links:
-      - §§INSTANCE-molgenisdb:molgenisdb
+  §§INSTANCE-jupyter-datascience-notebook:
+    image: jupyter/datascience-notebook
+    container_name:  §§INSTANCE-jupyter-datascience-notebook
     ports:
-      - "§§PORT:8080"
+      - "§§PORT:8888"
     environment:
-     - MOLGENIS_ADMIN_PASSWORD=§§MOLGENIS_ADMIN_PASSWORD
-     - MOLGENIS_ADMIN_email=§§MOLGENIS_ADMIN_EMAIL
-     - MYSQL_DATABASE=molgenis
-     - MYSQL_USER=molgenis
-     - MYSQL_PASSWORD=§§MYSQL_PASSWORD
+     - PASSWORD=§§JUPYTER_PASSWORD
     volumes_from: 
-      - §§INSTANCE-molgenis-data     
+      - §§INSTANCE-jupyter-datascience-notebook-data    
     depends_on:
      - §§INSTANCE-molgenisdb
 
-  §§INSTANCE-molgenisdb:
-    image: mysql
-    container_name: §§INSTANCE-molgenisdb
-    user: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
-      - MYSQL_DATABASE=molgenis
-      - MYSQL_USER=molgenis
-      - MYSQL_PASSWORD=§§MYSQL_PASSWORD
-    volumes_from: 
-      - §§INSTANCE-molgenis-data
-
-  §§INSTANCE-molgenis-data:
+  §§INSTANCE-jupyter-datascience-notebook-data:
     image: busybox
-    container_name: §§INSTANCE-molgenis-data
+    container_name: §§INSTANCE-jupyter-datascience-notebook-data
     volumes:
-      - §§FOLDER/var/lib/mysql:/var/lib/mysql
+      - §§FOLDER/home/jovyan/work:/home/jovyan/work
       
   
