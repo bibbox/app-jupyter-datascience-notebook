@@ -9,8 +9,6 @@ services:
      - PASSWORD=§§JUPYTER_PASSWORD
     volumes_from: 
       - §§INSTANCE-jupyter-datascience-notebook-data    
-    depends_on:
-     - §§INSTANCE-molgenisdb
 
   §§INSTANCE-jupyter-datascience-notebook-data:
     image: busybox
