@@ -42,6 +42,7 @@ createFolders()
     if [[ ! -d "$folder" ]]; then
         echo "Creating Data Folder"
         mkdir -p "$folder/home/jovyan/work"
+        chmod -R 777 "$folder/home"
     fi
 }
 
