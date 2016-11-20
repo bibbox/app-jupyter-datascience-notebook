@@ -1,7 +1,7 @@
 [
   {
       "id":"JUPYTER_PASSWORD",
-      "display_name":"Molgenis Admin Password",
+      "display_name":"Jupyter  Password",
       "type":"PASSWORD",
       "default_value":"",
       "description":"Configures Jupyter Notebook to require the given plain-text password. Should be combined with USE_HTTPS on untrusted networks. Note that this option is not as secure as passing a pre-hashed password on the command line!",
