@@ -33,7 +33,7 @@ updateConfigurationFile()
     sed -i  "s/§§PORT/${port}/g" "$folder/docker-compose.yml"
   # CHANGE  
   # TODO special characters in passwords 
-    sed -i "s#§§JUPYTER_PASSWORD #${JUPYTER_PASSWORD}#g" "$folder/docker-compose.yml"
+    sed -i "s#§§JUPYTER_PASSWORD#${JUPYTER_PASSWORD}#g" "$folder/docker-compose.yml"
 }
 
 createFolders()
