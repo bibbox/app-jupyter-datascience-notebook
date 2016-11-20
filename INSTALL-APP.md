@@ -1,6 +1,6 @@
 ## Jupyter Datascience NotebookInstallation Instructions 
 
-*## Installation Instructions 
+## Installation Instructions 
 
 ## After the installation
 

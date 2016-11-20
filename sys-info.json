@@ -1,4 +1,4 @@
 {
-  runningcontainers:["-molgenis", "-molgenisdb"],
-  supportcontainers:["--molgenis-data"]    
+  runningcontainers:["-jupyter-datascience-notebook"],
+  supportcontainers:[]    
 }
