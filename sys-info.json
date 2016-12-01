@@ -1,4 +1,4 @@
 {
-  runningcontainers:["-jupyter-datascience-notebook"],
+  runningcontainers:["§§INSTANCE-jupyter-datascience-notebook"],
   supportcontainers:[]    
 }
