@@ -1,13 +1,12 @@
 <VirtualHost *:80>
         ServerName §§subdomain.§§url
-        <Proxy *>
-                        Order deny,allow
-                        Allow from all
-        </Proxy>
 
         ProxyRequests           Off
-        ProxyPreserveHost On
+        ProxyPreserveHost       On
+
+		ProxyPass /api/kernels/ ws://§§ip:§§port/api/kernels/
+        ProxyPassReverse /api/kernels/ ws://§§ip:§§port/api/kernels/
         ProxyPass               /       http://§§ip:§§port/
         ProxyPassReverse        /       http://§§ip:§§port/
-</VirtualHost>
 
+</VirtualHost>
