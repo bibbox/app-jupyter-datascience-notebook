@@ -1,0 +1,15 @@
+{
+  "makefolders":[
+    "home/jovyan/work"
+  ],
+  "copyfiles":[
+    {
+      "source":"virtualhost_http.template",
+      "destination":"virtualhost_http.template"
+    },
+    {
+      "source":"virtualhost_https.template",
+      "destination":"virtualhost_https.template"
+    }
+  ]
+}
