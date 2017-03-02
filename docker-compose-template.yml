@@ -1,8 +1,16 @@
 version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
 services:
   §§INSTANCE-jupyter-datascience-notebook:
     image: jupyter/datascience-notebook
     container_name:  §§INSTANCE-jupyter-datascience-notebook
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     ports:
       - "§§PORT:8888"
     environment:
