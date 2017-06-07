@@ -1,10 +1,11 @@
 {
-		"name": "Jupyter Datascience Notebook Stack",
-		"short_name": "Jupyter",
-		"version": "4.2.x",
-		"description": "The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.",
-     "short_description": "Interactive data science and scientific computing",
-		"catalogue_url": "",
-		"application_url": "http://jupyter.org",
-		"tags": ["Data Analysis", "Data Integration"]
+	"name": "Jupyter Datascience Notebook Stack",
+	"short_name": "Jupyter",
+	"version": "4.2.x",
+	"description": "The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.",
+	"short_description": "Interactive data science and scientific computing",
+	"catalogue_url": "",
+	"application_url": "http://jupyter.org",
+	"tags": ["Data Analysis", "Data Integration"],
+	"application_documentation_url": "https://jupyter.readthedocs.io/en/latest"
 }
