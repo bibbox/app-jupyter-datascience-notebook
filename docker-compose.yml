@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  bibbox-jupyter-tensorflow-notebook:
+    image: jupyter/tensorflow-notebook 
+    container_name:  bibbox-jupyter-datascience-notebook
+    restart: unless-stopped
+    ports:
+      -  "8065:8888"
+    environment:
+     -   PASSWORD="vendetta"
+    volumes_from: 
+      -  bibbox-jupyter-datascience-notebook-data    
+
+  bibbox-jupyter-datascience-notebook-data:
+    image: busybox
+    container_name: bibbox-jupyter-datascience-notebook-data
+    volumes:
+      - ./data/work:/home/jovyan/work
+
+      
