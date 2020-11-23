@@ -13,7 +13,7 @@ To install the app locally execute the commands:
 
 `git clone https://github.com/bibbox/app-jupyter-datascience-notebook`
 
-`cd aapp-jupyter-datascience-notebook`
+`cd app-jupyter-datascience-notebook`
 
 `mkdir -p data/work`
 
