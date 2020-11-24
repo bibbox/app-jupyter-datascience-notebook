@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   bibbox-jupyter-tensorflow-notebook:
@@ -6,11 +6,14 @@ services:
     container_name:  bibbox-jupyter-datascience-notebook
     restart: unless-stopped
     ports:
-      - "8065:8888"
-    environment:
-     - PASSWORD=vendetta
-     - NotebookApp.token=vendetta
-     - NotebookApp.password=vendetta     
+      -  "8065:8888"
+    volumes_from: 
+      -  bibbox-jupyter-datascience-notebook-data    
+    command: "start-notebook.sh --NotebookApp.token='vendetta' --NotebookApp.allow_origin='localhost:8065'"
+
+
+  bibbox-jupyter-datascience-notebook-data:
+    image: busybox
+    container_name: bibbox-jupyter-datascience-notebook-data
     volumes:
       - ./data/work:/home/jovyan/work
-    command: "start-notebook.sh --NotebookApp.token='vendetta' --NotebookApp.allow_origin='localhost:8065'"
