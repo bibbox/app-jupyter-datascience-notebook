@@ -22,6 +22,7 @@ services:
     image: busybox
     container_name: §§INSTANCE-jupyter-datascience-notebook-data
     volumes:
-      - ./home/jovyan/work:/home/jovyan/work
+      - ./api:/home/jovyan/work
+
       
   

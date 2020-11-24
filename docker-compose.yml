@@ -1,19 +1,13 @@
-version: '2'
+version: '3.2'
 
 services:
   bibbox-jupyter-tensorflow-notebook:
     image: jupyter/datascience-notebook
-    container_name:  bibbox-jupyter-datascience-notebook
+    container_name:  OS_api-jupyter-datascience-notebook
     restart: unless-stopped
     ports:
-      -  "8065:8888"
-    volumes_from: 
-      -  bibbox-jupyter-datascience-notebook-data    
-    command: "start-notebook.sh --NotebookApp.token='vendetta' --NotebookApp.allow_origin='localhost:8065'"
-
-
-  bibbox-jupyter-datascience-notebook-data:
-    image: busybox
-    container_name: bibbox-jupyter-datascience-notebook-data
+      -  "8888:8888"
     volumes:
-      - ./data/work:/home/jovyan/work
+      - ./api:/home/jovyan/work
+
+    command: "start-notebook.sh --NotebookApp.token='vendetta' --NotebookApp.allow_origin='localhost:8888'"

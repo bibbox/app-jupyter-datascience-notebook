@@ -2,7 +2,7 @@
 
 ## Hints
 * approx. time with medium fast internet connection: **20 minutes**
-* initial user/passwordd: none during the developmnt mode'>'**
+* initial user/password: none during the developmnt mode'>'**
 
 ## Docker Images Used
  * [jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook/) 
@@ -15,17 +15,13 @@ To install the app locally execute the commands:
 
 `cd app-jupyter-datascience-notebook`
 
-`mkdir -p data/work`
+`docker-compose up -d or docker-compose up to see Logs`
 
-`docker-compose up -d`
+After the Installation open "http://localhost:8888. And enter the Jupyther Token ("vendetta" see docker-compose.yml) 
 
-After the Installation open "localhost:8065/install/install.php" in browser to set up SeedDMS.
+You can run the Demo.ipynb from the folder system. The folders contain the Python sources until the PyPi Package is complete.
 
-The dafault port of the app SeedDMS is 8065.
-
-If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`.
-
-
+If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
 
 ## Install Environment Variables
 

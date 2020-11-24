@@ -1,6 +1,6 @@
 {
   "makefolders":[
-    "home/jovyan/work"
+    "api/"
   ],
   "copyfiles":[
     {
