@@ -8,7 +8,7 @@ services:
     ports:
       -  "8065:8888"
     environment:
-     -   PASSWORD="vendetta"
+     -   PASSWORD=vendetta
     volumes_from: 
       -  bibbox-jupyter-datascience-notebook-data    
 
