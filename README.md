@@ -19,7 +19,7 @@ To install the app locally execute the commands:
 
 After the Installation open "http://localhost:8888. And enter the Jupyther Token ("vendetta" see docker-compose.yml) 
 
-You can run the Demo.ipynb from the folder system. The folders contain the Python sources until the PyPi Package is complete.
+You can run the Demo.ipynb from within the demo folder. The other folders contain the Python sources until the PyPi Package is complete.
 
 If necessary change the ports in the environment file .env and the volume mounts in `docker-compose.yml`. 
 

@@ -223,6 +223,12 @@ class Json_factory():
 
         return json.dumps(site_json)
 
+    def create_cpr_export_job_json(self, cp_id=None):
+
+        part_json = {"objectType": "cpr", "params": {"cpId": cp_id}}
+
+        return json.dumps(part_json)
+
     ##TODO
 
     # Import collection protocols
@@ -233,9 +239,42 @@ class Json_factory():
 
         return json.dumps(site_json)
 
+<<<<<<< HEAD
     
-    def create_cp_import_job_json(self, record_ids=None):
+#   Create  Any AQL Query
+    def create_aql(self, cpid, aql, rowmode='OFF', coloumexpr='true', isodate='true'):
 
-        site_json = {"objectType": "site", "recordIds": record_ids}
+        params = {
+            "cpId" : cpid,
+            "aql" : aql,
+            "wideRowMode" : rowmode,
+            "outputColoumnExprs" : coloumexpr,
+            "outputIsoDateTime" : isodate
+        }
 
-        return json.dumps(site_json)
+        return json.dumps(params)
+
+# Execute Saved Query
+    def execute_query(self, start, results, drivingform="Participant", rowmode="OFF"):
+
+        params= {
+            "drivingForm": drivingform,
+            "wideRowMode": rowmode,
+            "startAt": start,
+            "maxResults":results
+        }
+
+        return json.dumps(params)
+=======
+    def create_cpr_part_import_job(self, schemaname=None, operation=None, fileid=None,
+                                   dateformat=None, timeformat=None):
+
+        part_cpr_json = {"objectType": schemaname,
+                    "importType": operation,
+                    "inputFileId": fileid,
+                    "dateFormat":dateformat,
+                    "timeFormat":timeformat
+                    }
+
+        return json.dumps(part_cpr_json)
+>>>>>>> dev_chri

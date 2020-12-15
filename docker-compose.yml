@@ -1,10 +1,14 @@
 version: '3.2'
-
+networks:
+    bibbox-default-network:
+      external: true
 services:
   bibbox-jupyter-tensorflow-notebook:
     image: jupyter/datascience-notebook
     container_name:  OS_api-jupyter-datascience-notebook
     restart: unless-stopped
+    networks:
+      - bibbox-default-network
     ports:
       -  "8888:8888"
     volumes:
